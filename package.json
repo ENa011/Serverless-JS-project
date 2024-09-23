@@ -18,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/ENa011/Serverless-JS-project/issues"
   },
-  "homepage": "https://github.com/ENa011/Serverless-JS-project#readme"
+  "homepage": "https://github.com/ENa011/Serverless-JS-project#readme",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.651.1",
+    "@aws-sdk/lib-dynamodb": "^3.651.1",
+    "aws-sdk": "^2.1691.0",
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^10.0.0",
+    "winston": "^3.14.2"
+  }
 }
