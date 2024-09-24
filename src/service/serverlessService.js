@@ -37,7 +37,7 @@ async function createTicket(item, userID) {
 
 async function loginCred(item) {
     let databased = await serverlessDAO.scanUserID(item.userID);
-    if(item.userID != databased.userID || !(await bcrypt.compare(item.passWord, databased.passWord))) {
+    if(!databased||item.userID != databased.userID || !(await bcrypt.compare(item.passWord, databased.passWord))) {
         return false;
     } else {
         const token = jwt.sign(
