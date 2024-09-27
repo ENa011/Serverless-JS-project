@@ -41,7 +41,7 @@ router.post("/ticket", async (req, res) => {
 
 router.get("/ticket/status", async (req, res) => {
     const data = await serverlessService.viewAllPending();
-    res.status(201).json(JSON.stringify(data));
+    res.status(201).json(data);
 })
 
 
@@ -82,7 +82,7 @@ router.get("/history", async (req, res) =>{
         const user = await serverlessService.decodeJWT(token);
         req.user = user;
         const data = await serverlessService.viewTicketHistroy(user);
-        res.status(201).json(JSON.stringify(data));
+        res.status(201).json(data);
     }
 })
 
